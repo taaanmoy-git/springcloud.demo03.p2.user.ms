@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: userServiceMS
+
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        register: true
+      config:
+        fail-fast: false
+        enabled: true
+        prefix: config
+        defaultContext: application
+        format: YAML
+
+server:
+  port: 8282
